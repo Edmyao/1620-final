@@ -1,0 +1,501 @@
+img {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    overflow:hidden;
+}
+
+#background{
+    background-image: url(img/bg.png);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 40px;
+/*    z-index: -1;*/
+}
+
+#notgoal{
+    width: 100vw;
+    height: 100vh;
+}
+
+.backgroundimg{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;  
+}
+
+
+/*----------------------------CLOUDS--------------------------------*/
+.cloud{
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    background-size: contain;
+    z-index: 0;
+}
+
+
+#cloud1{
+    left: 2%;
+    top: 7%;
+    animation: bounce1 13s infinite;
+}
+
+@keyframes bounce1 {
+    0% {top: 7%;}
+    50% {top: 15%;}
+    100% {top: 7%;}
+}
+
+
+#cloud2{
+    left: 20%;
+    top: 30%;
+    animation: bounce2 10s infinite;
+}
+
+@keyframes bounce2 {
+    0% {top: 30%;}
+    50% {top: 35%;}
+    100% {top: 30%;}
+}
+
+#cloud3{
+    right: 35%;
+    top: 15%;
+    animation: bounce3 12s infinite;
+}
+
+@keyframes bounce3 {
+    0% {top: 15%;}
+    50% {top: 20%;}
+    100% {top: 15%;}
+}
+
+#cloud4{
+    right: 10%;
+    top: 35%;
+    animation: bounce4 12s infinite;
+}
+
+@keyframes bounce4 {
+    0% {top: 35%;}
+    50% {top: 27%;}
+    100% {top: 35%;}
+}
+
+/*----------------------------MENUS--------------------------*/
+
+.menu{
+    background-color: rgba(0,0,0,0.6);
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+    height: 0; width: 130px;
+    transition: 0.5s;
+
+}
+
+.but_container{
+    height: 375px;
+    width: 120px;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.menubut{
+    height: 120px; width: 120px;
+    background-color: rgb(250,250,250);
+    display: inline-block;
+    margin-top: 5px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: 0.2s;
+    float: left;
+}
+
+#topmenu{
+    top: 0;
+    left: 0;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+#botmenu{
+    bottom: 0;
+    right: 0;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+#rulesbut{
+    background-image: url(img/book.png);
+}
+
+#fieldbut{
+    background-image: url(img/field.png);
+}
+
+#ballbut{
+    background-image: url(img/target.png);
+}
+
+#tvbut{
+    background-image: url(img/tv.png);
+}
+
+#fifabut{
+    background-image: url(img/fifa.png);
+}
+
+#createbut{
+    background-image: url(img/create.png);
+}
+
+/*----------------------------NET and BALL GAME--------------------------*/
+
+#netcontainer{
+    position: absolute;
+    height: 40%; width: 50vw;
+    max-height: 320px;
+    min-height: 100px;
+    max-width: 850px;
+    left: 0; right: 0; bottom: 35%;
+    margin: auto;
+}
+
+#net{
+    bottom: 0; left: 0; right: 0;
+    position: absolute;
+    margin: auto;
+}
+
+.targets{
+    width: 33%; height:50%;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: none;
+}
+
+#topleft{
+    position: absolute;
+    left: 0%; top: 0;
+    margin: auto;
+}
+
+#topmid{
+    position: absolute;
+    left: 33%; top: 0;
+    margin: auto;
+}
+
+#topright{
+    position: absolute;
+    left: 66%; top: 0;
+    margin: auto;
+}
+
+#botleft{
+    position: absolute;
+    left: 0%; top: 50%;
+    margin: auto;
+}
+
+#botmid{
+    position: absolute;
+    left: 33%; top: 50%;
+    margin: auto;
+}
+
+#botright{
+    position: absolute;
+    left: 66%; top: 50%;
+    margin: auto;
+}
+
+#ball{
+    width: 150px; height: 150px;
+    bottom: -100px; left: 20%; right: 0;
+    margin: auto;
+    position: absolute;
+    transform: rotate(-180deg);
+/*    z-index: 3;*/
+    
+}
+
+#goalcount{
+    position: absolute;
+    top: -130px; left: 0; right: 0;
+    margin: auto;
+    color: black;
+    text-align: center;
+    font-family: Arial;
+    font-size: 100px;
+    display: none;
+}
+
+
+/*----------------------------POPUPS--------------------------*/
+
+#popup{
+    width: 0; height: 0;
+    max-height: 600px;
+    max-width: 1000px;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    background-color: rgb(20,20,20);
+    z-index: 999999;
+    border-radius: 20px;
+    transition: 0.6s;
+}
+
+#close{
+    top: -20px; right:-20px;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    display: none;
+}
+
+#header{
+    left: 0; right: 0; top: 20px;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    font-family: Arial Black;
+}
+
+/*------------------Text body----------------*/
+
+.text{
+    position: absolute;
+    color: white;
+    font-family: Arial Black;
+    display: none;
+    font-size: 20px;
+}
+
+#rulestext{
+    width: 90%; height: 70%;
+    top: 100px; left: 0; right: 0;
+    margin: auto;
+    min-height: 250px;
+    overflow-y: auto;
+    transition: 2s;
+}
+
+#fieldtext{
+    right: 70%; top: 0; bottom: 0;
+    margin: auto;
+    width: 40%; height: 65%;
+    overflow: auto;
+    transition: 1s;
+}
+
+#createtext{
+    top: 70px; left: 0; right: 0;
+    height: 10%; width: 100%;
+    text-align: center;
+}
+
+#playername{
+    bottom: 30px;
+    height: 10%; width: 100%;
+    text-align: center;
+}
+
+/*------------------Img body----------------*/
+
+.img{
+    border-radius: 10px;
+    position: absolute;
+    display: none;
+}
+
+#fieldimg{
+    width: 50%; height: 65%;
+    left: 70%; top: 0; bottom: 0;
+    margin: auto;
+    transition: 1s;
+    background-image: url(img/createfield2.png)
+}
+
+#fifaimg{
+    width: 30%; height: 40%;
+    position: absolute;
+    right: 10%; top: 100px;
+    margin: auto;
+    background-image: url(img/cup.png)
+}
+
+
+#createimg{
+    width: 100%; height: 60%;
+    top: 45px;
+    margin: auto;
+    background-image: url(img/players/none.png);
+}
+
+
+/*----------------Video POP-----------------------*/
+
+#vidbody{
+    position: absolute;
+    margin: auto;
+    right: 0; top: 0; bottom: 0; left: 0;
+    width: 70%; height: 70%;
+    display: none;
+}
+
+/*----------------fifa POP-----------------------*/
+#cupcont{
+    width: 40%; height: 40%;
+    position: absolute;
+    left: 10%; top: 100px;
+    margin: auto;
+    display: none;
+}
+.placement{
+    width: 100%; 
+    position: absolute;
+    margin: auto;
+    left: 0;
+    width: 0;
+    transition: 1s;
+}
+
+#firstcont{
+    top: 0;
+}
+#secondcont{
+    top: 25%;
+}
+#thirdcont{
+    top: 50%;
+    
+}
+#fourthcont{
+    top: 75%;
+}
+
+.flag{
+    width: 10%;
+    border: 2px solid rgb(250,250,250);
+    display: inline-block;
+}
+.country{
+    font-family: Arial Black;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.count{
+    font-family: Arial Black;
+    color: white;
+    display: inline-block;
+    float: right
+}
+
+#bottombar{
+    position: absolute;
+    height: 10%; width: 0;
+    bottom: 40px; right: 0;
+    background-color: rgb(50,95,149);
+    display: none;
+    transition: 1s;
+}
+
+.fifatag{
+    top: 0; bottom: 0;
+    height: 90%;
+    width: auto;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#Lfifatag{
+    left: 5%;
+}
+
+#Rfifatag{
+    right: 5%;
+}
+
+#fifalink{
+    right: 0; left: 0; top: 0; bottom: 0;
+    height: 100%; width: 50%;
+    margin: auto;
+    position: absolute;
+    font-size: 30px;
+    font-family: Arial Black;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/*--------------Create POP----------------*/
+
+#inputcont{
+    left: 5%; top: 120px; bottom: 0;
+    position: absolute;
+    display: none;
+}
+
+.inputs{
+    padding: 2px;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+label{
+    margin-left: 15px;
+    font-family: Arial Black;
+    color: white;
+}
+
+#statscont{
+    right: 2%; top: 120px; bottom: 0;
+    width: 40%; height: 52%;
+    position: absolute;
+    display: none;
+}
+
+#statsbut{
+    left: 0; right: 0; bottom: -50px;
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    display: none;
+}
+#stattext{
+    width: 100%; height: 100%;
+    display: none;
+    width: 100%;
+    margin-bottom: 5%;
+    overflow-y: auto;
+}
+
+
+
+
+

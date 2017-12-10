@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Soccer</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        <div id = 'background'>
+            <div class='menu' id='topmenu'>
+                <div class ='but_container'>
+                    <div class='menubut backgroundimg' id='rulesbut'></div>
+                    <div class='menubut backgroundimg' id='fieldbut'></div>
+                    <div class='menubut backgroundimg' id='ballbut'></div>
+                </div>
+            </div>
+            
+            <div class='menu' id='botmenu'>
+                <div class ='but_container'>
+                    <div class='menubut backgroundimg' id='tvbut'></div>
+                    <div class='menubut backgroundimg' id='fifabut'></div>
+                    <div class='menubut backgroundimg' id='createbut'></div>
+                </div>
+            </div>
+            
+            <div class='cloud bounce' id='cloud1'><img src="img/cloud1.png"></div>
+            <div class='cloud bounce' id='cloud2'><img src="img/cloud2.png"></div>
+            <div class='cloud bounce' id='cloud3'><img src="img/cloud2.png"></div>
+            <div class='cloud bounce' id='cloud4'><img src="img/cloud1.png"></div>
+            
+            <div id="notgoal"></div>
+            <div id='netcontainer'>
+                <div id="goalcount">0</div>
+                <img id='net' src="img/tnet.png">
+                <div id="topleft" class="targets"></div>
+                <div id="topmid" class="targets"></div>
+                <div id="topright" class="targets"></div>
+                <div id="botleft" class="targets"></div>
+                <div id="botmid" class="targets"></div>
+                <div id="botright" class="targets"></div>
+            </div>
+            
+            <div id='ball'><img src="img/ball.png"></div>
+        </div>
+        
+        <div id='popup'>
+            <div id='header'></div>
+            <div class='text' id='rulestext'></div>
+            
+            <div class='text' id='fieldtext'></div>
+            <div class='img backgroundimg' id='fieldimg'></div>
+
+            <iframe id='vidbody' width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+            
+            <div id='cupcont'>
+                <div id='firstcont' class='placement'>
+                    <img class='flag' src="img/flags/br.png">
+                    <p class='country'>Brazil</p>
+                    <p class='count'>5</p>
+                </div>
+                <div id='secondcont' class='placement'>
+                    <img class='flag' src="img/flags/it.png">
+                    <p class='country'>Italy</p>
+                    <p class='count'>4</p>
+                </div>
+                <div id='thirdcont' class='placement'>
+                    <img class='flag' src="img/flags/de.png">
+                    <p class='country'>Germany</p>
+                    <p class='count'>4</p>
+                </div>
+                <div id='fourthcont' class='placement'>
+                    <img class='flag' src="img/flags/uy.png">
+                    <p class='country'>Uruguay</p>
+                    <p class='count'>2</p>
+                </div>
+            </div>
+            <div class='img backgroundimg' id='fifaimg'></div>
+            <div id="bottombar">
+                <a href="http://www.fifa.com/" target="_blank">
+                    <div id="fifalink">TAKE ME TO FIFA</div>
+                </a>
+                <img id="Lfifatag" class="fifatag" src="img/Ififa.png">
+                <img id="Rfifatag" class="fifatag" src="img/Ififa.png">
+            </div>
+            
+            <div id="createcont">
+                <div class="text" id="createtext"></div>
+                <div id='inputcont'>
+                    <label>Position:</label>
+                    <select class="inputs" id="positioninput">
+                        <option value="offence">Offence</option>
+                        <option value="center">Center</option>
+                        <option value="defence">Defence</option>
+                        <option value="goalie">Goalie</option>
+                    </select>
+                    <label>Age:</label>
+                    <input class='inputs' id='inputage' type="number" min="10" max="60">
+                    <button class="inputs" id="getplayer">Go!</button>
+                    <div class='img backgroundimg' id='createimg'></div>
+                    <div class="text" id="playername"></div>
+                </div>
+                <div id="statscont">
+                    <div class="text" id="stattext"></div>
+                    <button class="inputs" id="statsbut">Show Position Stats</button>
+                </div>
+            </div>
+            <div id='close'><img src="img/closebut.png"></div>
+        </div>
+        <script src="js.js"></script>
+    </body>
+</html>
+
+
+
+
