@@ -1,3 +1,3 @@
 ## Soccer Demo
-
-https://edmyao.github.io/1620-final/
+This is my singe page, completely front ended soccer demo
+https://edmyao.github.io/Soccer-Demo-/
